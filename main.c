@@ -151,7 +151,7 @@ uint8_t DS1302_ReceiveByte(void) {
 void set_time() {
     // see "Table 3. Register Address/Definition"
     const uint8_t bytes[8] =
-      // sec  min   hour  day    mon  dow(1-7) year  wp (in BCD!)
+      // sec   min  hour   day   mon  dow(1-7) year  wp (in BCD!)
       { 0x00, 0x11, 0x21, 0x26, 0x04, 0x04,    0x18, 0x00 };
 
     DS1302_Select();
